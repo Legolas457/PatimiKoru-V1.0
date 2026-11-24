@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>patimikoru. | Pati Dostlarının Buluşma Noktası</title>
+<meta name="description" content="Sokak hayvanları için küçük iyilikleri görevlere dönüştüren, puan ve topluluk ile motive eden bir gençlik projesi.">
+<meta property="og:title" content="patimikoru. | Pati Dostlarının Buluşma Noktası"><meta property="og:description" content="Sokak hayvanları için günlük iyilik görevleri, puanlar ve topluluk."><meta property="og:type" content="website"><meta name="theme-color" content="#17382B">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F1E9;--sf:#fff;--tx:#1B2620;--mu:#5E6B63;--pr:#17382B;--ph:#0F271E;--ac:#E3A21A;--cl:#C9573A;--bd:#DDD9CB;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;min-height:100vh}
+h1,h2,h3,.fr{font-family:Fraunces,Georgia,serif;color:var(--pr);line-height:1.15}
+button,input,textarea{font:inherit;color:inherit}button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.hidden{display:none!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--pr);color:#fff;padding:11px 20px;border-radius:10px;font-weight:600;transition:background .2s}
+.btn:hover{background:var(--ph)}.btn.a{background:var(--ac);color:#241a00}.btn.a:hover{background:#cf9111}
+.btn.o{background:none;color:var(--pr);border:1.5px solid var(--pr)}.btn.o:hover{background:rgba(23,56,43,.07)}
+.btn.s{padding:6px 14px;font-size:.85rem}.btn.w{width:100%}.btn[disabled]{opacity:.55;cursor:default}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.brand{display:flex;align-items:center;gap:8px;font-family:Fraunces,serif;font-weight:700;font-size:1.3rem;color:var(--pr)}
+.brand i{font-style:normal;background:var(--ac);width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-size:1rem}
+.brand b{color:var(--cl)}
+header.top{position:sticky;top:0;z-index:50;background:rgba(243,241,233,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--bd)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+nav.links{display:flex;gap:22px;font-weight:600;font-size:.92rem}nav.links a{color:var(--mu);text-decoration:none}nav.links a:hover{color:var(--pr)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:56px 0 40px}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);margin-bottom:18px}
+.hero p{color:var(--mu);font-size:1.08rem;max-width:520px;margin-bottom:26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.pic{border-radius:24px;overflow:hidden;background:linear-gradient(135deg,var(--pr),#2f6a4f);aspect-ratio:4/3;display:grid;place-items:center;font-size:5rem;box-shadow:0 18px 40px rgba(23,56,43,.18)}
+.pic img{width:100%;height:100%;object-fit:cover}
+.band{background:var(--pr);color:#fff;padding:22px 0}.band .wrap{display:flex;justify-content:space-around;gap:20px;flex-wrap:wrap;text-align:center}
+.band strong{font-family:Fraunces,serif;font-size:1.5rem;color:var(--ac);display:block}.band span{font-size:.88rem;opacity:.85}
+section.s{padding:64px 0}section.s h2{font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:10px}
+.lead{color:var(--mu);max-width:620px;margin-bottom:32px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:24px}
+.step em{font-style:normal;font-family:Fraunces,serif;font-weight:700;font-size:1.6rem;color:var(--cl)}
+.step h3{font-size:1.15rem;margin:6px 0}.step p,.info p{color:var(--mu);font-size:.93rem}
+.info{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px}.info h3{font-size:1.1rem;margin-bottom:4px}
+.alt{background:#E9E6D8}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:24px}
+.person{background:var(--sf);border-radius:var(--r);padding:20px;border:1px solid var(--bd)}.person b{display:block;color:var(--pr)}.person small{color:var(--mu)}
+details{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+summary{font-weight:600;color:var(--pr);cursor:pointer}details p{margin-top:8px;color:var(--mu);font-size:.93rem}
+footer{background:var(--ph);color:#cfd8d2;padding:32px 0;font-size:.88rem}footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.modal{position:fixed;inset:0;background:rgba(15,39,30,.65);display:grid;place-items:center;z-index:200;padding:20px}
+.mcard{background:#fff;border-radius:20px;padding:30px;max-width:400px;width:100%;position:relative}
+.mcard h2{margin:8px 0 4px}.mcard p{color:var(--mu);font-size:.9rem;margin-bottom:18px}
+.x{position:absolute;top:16px;right:18px;font-size:1.1rem;color:var(--mu)}
+input[type=text],input[type=password],textarea{width:100%;padding:11px 14px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);margin-bottom:12px}
+/* app */
+#app{max-width:720px;margin:0 auto;padding-bottom:84px;min-height:100vh}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:#fff;border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:20}
+.pill{background:var(--bg);padding:6px 14px;border-radius:20px;font-weight:700;color:var(--pr);font-size:.9rem}
+.pane{padding:20px}.pane>h2{font-size:1.5rem;margin-bottom:4px}.sub{color:var(--mu);font-size:.9rem;margin-bottom:18px}
+.stack{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:16px}
+.card.row{display:flex;align-items:center;gap:12px}.grow{flex:1;min-width:0}.grow small{display:block;color:var(--mu)}
+.card h3{font-size:1.02rem;margin-bottom:4px}.card p{color:var(--mu);font-size:.88rem}
+.chip{background:rgba(227,162,26,.2);color:#7a5600;padding:3px 10px;border-radius:20px;font-size:.78rem;font-weight:700;white-space:nowrap}
+.card img.ph{width:100%;max-height:200px;object-fit:cover;border-radius:10px;margin:10px 0}
+.av{width:42px;height:42px;border-radius:50%;background:var(--pr);color:#fff;display:grid;place-items:center;font-family:Fraunces,serif;font-weight:700;flex:none}
+.post-head{display:flex;gap:10px;align-items:center;margin-bottom:8px}.post-head small{color:var(--mu);display:block;font-size:.76rem}
+.acts{display:flex;gap:16px;margin:10px 0;font-size:.88rem;font-weight:600;color:var(--mu)}.acts .on{color:var(--cl)}
+.cm{background:var(--bg);border-radius:8px;padding:6px 10px;font-size:.85rem;margin-bottom:6px}
+.cf{display:flex;gap:8px}.cf input{margin:0}
+.empty{color:var(--mu);text-align:center;padding:20px;font-size:.9rem}
+.sec{margin:22px 0 10px;font-size:1.05rem}
+.chatbox{display:flex;flex-direction:column;height:calc(100vh - 220px);min-height:340px}
+.chead{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+#cm{flex:1;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:12px;background:#fff;border:1px solid var(--bd);border-radius:var(--r);margin-bottom:10px}
+.msg{max-width:78%;background:var(--bg);padding:8px 12px;border-radius:14px 14px 14px 4px;align-self:flex-start;font-size:.92rem;overflow-wrap:anywhere}
+.msg.me{background:var(--pr);color:#fff;align-self:flex-end;border-radius:14px 14px 4px 14px}
+.msg time{display:block;font-size:.68rem;opacity:.6;text-align:right}
+.shop{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}.shop .card{text-align:center}.shop b{font-size:2rem;display:block}
+#gb{height:300px;background:var(--bg);border:1px dashed var(--bd);border-radius:10px;position:relative;overflow:hidden;display:grid;place-items:center;text-align:center;padding:10px}
+.paw{position:absolute;font-size:2.2rem;width:48px;height:48px}
+.gi{display:flex;justify-content:space-between;font-weight:700;color:var(--pr);margin-bottom:12px}
+.me-card{text-align:center;padding:28px 16px}.me-card .av{width:72px;height:72px;font-size:1.8rem;margin:0 auto 10px}
+.mets{display:flex;justify-content:space-around;border-top:1px solid var(--bd);margin-top:18px;padding-top:16px}.mets strong{display:block;font-family:Fraunces,serif;font-size:1.3rem;color:var(--pr)}.mets span{font-size:.8rem;color:var(--mu)}
+.bn{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--bd);display:flex;overflow-x:auto;z-index:100;padding-bottom:env(safe-area-inset-bottom)}
+.bn button{flex:1;min-width:62px;padding:8px 4px;display:flex;flex-direction:column;align-items:center;font-size:.66rem;font-weight:600;color:var(--mu);position:relative}
+.bn button span{font-size:1.25rem}.bn button.on{color:var(--cl)}
+.bn button i{position:absolute;top:4px;right:12px;background:var(--cl);color:#fff;border-radius:10px;font-size:.62rem;padding:0 5px;font-style:normal}
+.toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%);background:var(--pr);color:#fff;padding:10px 20px;border-radius:30px;font-size:.88rem;z-index:300;max-width:90vw;text-align:center}
+@media(max-width:760px){.hero,.steps,.info{grid-template-columns:1fr}.hero{padding-top:32px}nav.links{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div id="site">
+<header class="top"><div class="wrap">
+  <a class="brand" href="#" style="text-decoration:none"><i>🐾</i>patimiko<b>ru.</b></a>
+  <nav class="links"><a href="#nasil">Nasıl çalışır?</a><a href="#neden">Neden?</a><a href="#hakkinda">Hakkında</a><a href="#sss">SSS</a></nav>
+  <button class="btn s" onclick="openAuth()">Giriş yap</button>
+</div></header>
+
+<main>
+<div class="wrap hero">
+  <div>
+    <h1>Sokaktaki dostlarımıza küçük bir iyilik, büyük bir fark.</h1>
+    <p>patimikoru, su koymak, mama bırakmak gibi küçük iyilikleri günlük görevlere çevirir. Görevi yap, fotoğrafla, puan kazan ve iyilik yapan bir toplulukla buluş.</p>
+    <div class="cta"><button class="btn a" onclick="openAuth()">Hemen başla</button><a class="btn o" href="#nasil">Nasıl çalışır?</a></div>
+  </div>
+  <div class="pic"><img src="hero.jpg" alt="Sokak hayvanları" onerror="var p=this.parentNode;this.remove();p.textContent='🐶🐱'"></div>
+</div>
+
+<div class="band"><div class="wrap">
+  <div><strong>4</strong><span>günlük iyilik görevi</span></div>
+  <div><strong>Puan</strong><span>her iyilik için ödül</span></div>
+  <div><strong>Topluluk</strong><span>arkadaş ekle, mesajlaş</span></div>
+  <div><strong>Ücretsiz</strong><span id="bandreg">kayıt için sadece isim</span></div>
+</div></div>
+
+<section class="s" id="nasil"><div class="wrap">
+  <h2>Üç adımda iyilik</h2><p class="lead">Karmaşık bir şey yok. Birkaç dakikanı ayırman yeterli.</p>
+  <div class="steps">
+    <div class="step"><em>1</em><h3>Görev seç</h3><p>Her gün yenilenen görevlerden birini seç: su koy, mama bırak, sıcak bir yuva hazırla.</p></div>
+    <div class="step"><em>2</em><h3>Fotoğrafla</h3><p>İyiliğini fotoğraflayıp yükle. Fotoğraf otomatik olarak akışta paylaşılır.</p></div>
+    <div class="step"><em>3</em><h3>Puan kazan</h3><p>Puanlarınla rozet al, sembolik mama bağışı yap ve rütbe atla.</p></div>
+  </div>
+</div></section>
+
+<section class="s alt" id="neden"><div class="wrap">
+  <h2>Neden patimikoru?</h2><p class="lead">Sokak hayvanlarına yardım etmek isteyen çoğu kişi nereden başlayacağını bilmiyor. Biz bunu kolaylaştırıyoruz.</p>
+  <div class="info">
+    <div><h3>Küçük adımlar, sürekli etki</h3><p>Bir kap su ya da bir avuç mama, özellikle yaz sıcağında ve kış soğuğunda hayat kurtarabilir.</p></div>
+    <div><h3>Oyunlaştırma ile alışkanlık</h3><p>Puan, rütbe ve rozetler iyiliği günlük bir alışkanlığa dönüştürür.</p></div>
+    <div><h3>Topluluk hissi</h3><p>Arkadaşlarını ekle, hikâyeni paylaş, birbirinizi mesajla motive edin.</p></div>
+    <div><h3>Bilinçlendirme</h3><p>Destek bölümünde yaralı hayvan bulduğunda ne yapacağını ve kimi arayacağını bulursun.</p></div>
+  </div>
+</div></section>
+
+<section class="s" id="hakkinda"><div class="wrap">
+  <h2>Hakkında</h2>
+  <p class="lead">patimikoru, sokak hayvanlarına yönelik duyarlılığı artırmak amacıyla geliştirilen bir gençlik projesidir. Amacımız, iyilik yapmayı eğlenceli, ölçülebilir ve paylaşılabilir hale getirmektir.</p>
+  <div class="info">
+    <div><h3>Problem</h3><p>İnsanlar yardım etmek istiyor ama düzenli bir yol bulamıyor. Yardım dağınık kalıyor ve motivasyon çabuk düşüyor.</p></div>
+    <div><h3>Çözüm</h3><p>Günlük görevler, puan sistemi ve sosyal akışla iyiliği takip edilebilir bir alışkanlığa çeviren bir platform.</p></div>
+    <div><h3>Hedef kitle</h3><p>Öğrenciler, aileler ve hayvan dostu herkes.</p></div>
+    <div><h3>Teknoloji</h3><p>HTML, CSS ve JavaScript ile geliştirildi. Veriler tarayıcıda saklanır ve GitHub Pages üzerinde yayınlanır.</p></div>
+  </div>
+  <div class="team">
+    <div class="person"><b>[Adın Soyadın]</b><small>Proje sahibi, geliştirici</small></div>
+    <div class="person"><b>[Danışman Öğretmen]</b><small>Proje danışmanı</small></div>
+    <div class="person"><b>[Okulun Adı]</b><small>TÜBİTAK 2204-A / 4006</small></div>
+  </div>
+</div></section>
+
+<section class="s alt" id="sss"><div class="wrap">
+  <h2>Sık sorulan sorular</h2><div style="height:18px"></div>
+  <details id="faq-reg"><summary>Kayıt için ne gerekiyor?</summary><p>Sadece bir isim ya da takma ad. E-posta veya şifre istemiyoruz.</p></details>
+  <details id="faq-sim"><summary>Arkadaşlarım ve mesajlar gerçek mi?</summary><p>Bu sürüm bir prototiptir. Arkadaşlar ve mesajlaşma, tek cihazda çalışan örnek kullanıcılarla simüle edilir. Gerçek çok kullanıcılı yapı için sunucu (ör. Firebase) eklenecek.</p></details>
+  <details><summary>Mama bağışı gerçekten yapılıyor mu?</summary><p>Şu an sembolik. İleride bir barınak ile iş birliği yapılması hedefleniyor.</p></details>
+  <details id="faq-data"><summary>Verilerim nerede duruyor?</summary><p>Yalnızca bu cihazdaki tarayıcında. Profil sekmesinden istediğin an silebilirsin.</p></details>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© 2026 patimikoru. Tüm canlar için.</span><span>TÜBİTAK 2204-A / 4006 projesi olarak hazırlanmıştır.</span></div></footer>
+</div>
+
+<div id="auth" class="modal hidden"><div class="mcard" role="dialog" aria-modal="true">
+  <button class="x" onclick="closeAuth()" aria-label="Kapat">✕</button>
+  <div class="brand"><i>🐾</i>patimiko<b>ru.</b></div>
+  <h2>Hoş geldin!</h2><p>Başlamak için bir isim ya da takma ad yaz.</p>
+  <form onsubmit="login(event)"><label for="nm" class="sub">Adın veya takma adın</label>
+  <input type="text" id="nm" maxlength="20" placeholder="Örn: PatiDostu" required>
+  <input type="password" id="pw" class="hidden" minlength="6" placeholder="Şifre (en az 6 karakter)" autocomplete="current-password"><button class="btn w" id="lbtn">Giriş yap ve başla</button><button type="button" id="sw" class="btn o w hidden" style="margin-top:10px">Hesabın yok mu? Kayıt ol</button></form>
+</div></div>
+
+<div id="app" class="hidden">
+<div class="bar"><div class="brand"><i>🐾</i>patimiko<b>ru.</b></div><span class="pill">🐾 <span id="pts">0</span> puan</span></div>
+
+<section class="pane" id="t-tasks"><h2>Bugünün görevleri</h2><p class="sub">Fotoğraf yükleyerek görevini tamamla. Görevler her gün yenilenir.</p><div id="tl" class="stack"></div></section>
+
+<section class="pane hidden" id="t-feed"><h2>Patilerin hikâyeleri</h2><p class="sub">Topluluğa dokunduğun bir anı anlat.</p>
+  <div class="card" style="margin-bottom:16px"><textarea id="pt" rows="3" maxlength="400" placeholder="Bugün hangi dostumuza dokundun?"></textarea>
+  <img id="pp" class="ph hidden" alt="Önizleme">
+  <div style="display:flex;justify-content:space-between;align-items:center"><label class="btn o s">📷 Fotoğraf<input type="file" id="pf" accept="image/*" hidden onchange="pickPost(this)"></label><button class="btn s" onclick="publish()">Paylaş</button></div></div>
+  <div id="fd" class="stack"></div></section>
+
+<section class="pane hidden" id="t-friends">
+  <div id="fm"><h2>Pati dostları</h2><p class="sub">Arkadaşlarını ekle ve mesajlaş.</p>
+    <div id="fl" class="stack"></div>
+    <h3 class="sec">Liderlik tablosu</h3><div id="lb" class="stack"></div><h3 class="sec">Yeni dost bul</h3><input type="text" id="fs" placeholder="İsimle ara..." oninput="renderFriends()"><div id="sg" class="stack"></div></div>
+  <div id="chat" class="hidden chatbox">
+    <div class="chead"><button class="btn o s" onclick="closeChat()">← Geri</button><div class="av" id="ca"></div><b id="ct"></b></div>
+    <div id="cm"></div>
+    <form class="cf" onsubmit="send(event)"><input type="text" id="ci" maxlength="300" placeholder="Mesaj yaz..." autocomplete="off"><button class="btn">Gönder</button></form>
+  </div></section>
+
+<section class="pane hidden" id="t-shop"><h2>Pati mağazası</h2><p class="sub">Puanlarını rozetlere ve sembolik bağışa harca.</p><div id="sh" class="shop"></div></section>
+
+<section class="pane hidden" id="t-game"><h2>Pati yakala</h2><p class="sub">15 saniyede en çok pati yakala. Her 2 skor 1 puan kazandırır.</p>
+  <div class="card"><div class="gi"><span>Skor: <span id="gs">0</span></span><span>Süre: <span id="gt">15</span> sn</span></div>
+  <div id="gb"><button class="btn" onclick="startGame()">Oyunu başlat</button></div></div></section>
+
+<section class="pane hidden" id="t-support"><h2>Acil durum ve destek</h2><p class="sub">Yaralı ya da zor durumda bir hayvan gördüğünde.</p>
+  <div class="stack">
+    <div class="card"><h3>📞 Belediye (153)</h3><p>Sokak hayvanları için belediyenin çözüm hattını arayabilirsin.</p></div>
+    <div class="card"><h3>🩺 İlk adımlar</h3><p>Hayvana yaklaşırken sakin ol, ani hareket yapma. Kendini riske atma, yaralı hayvanı zorla tutma. Konumunu belirterek belediyeyi veya en yakın veterineri ara.</p></div>
+    <div class="card"><h3>⚖️ Yasal bilgi</h3><p>Sokak hayvanlarına zarar vermek 5199 sayılı Hayvanları Koruma Kanunu kapsamında yasaktır.</p></div>
+  </div></section>
+
+<section class="pane hidden" id="t-profile">
+  <div class="card me-card"><div class="av" id="pav">P</div><h2 id="pn"></h2><small id="pr" style="color:var(--mu)"></small>
+  <div class="mets"><div><strong id="mp">0</strong><span>Puan</span></div><div><strong id="mt">0</strong><span>Görev</span></div><div><strong id="mb">0</strong><span>En iyi skor</span></div><div><strong id="md">0</strong><span>Bağış</span></div><div><strong id="ms">0</strong><span>Gün serisi</span></div></div>
+  <div id="ob" style="margin-top:14px;font-size:1.6rem"></div></div>
+  <div class="stack" style="margin-top:14px"><button class="btn o w" onclick="logout()">Çıkış yap</button><button class="btn o w" onclick="resetAll()">Verilerimi sil</button></div></section>
+
+<nav class="bn" aria-label="Uygulama menüsü">
+  <button class="on" data-t="tasks"><span>📋</span>Görevler</button><button data-t="feed"><span>🌿</span>Akış</button>
+  <button data-t="friends"><span>🤝</span>Dostlar<i id="ub" class="hidden"></i></button><button data-t="shop"><span>🛍️</span>Mağaza</button>
+  <button data-t="game"><span>🎮</span>Oyun</button><button data-t="support"><span>🩺</span>Destek</button><button data-t="profile"><span>👤</span>Profil</button>
+</nav>
+</div>
+<div id="toast" class="toast hidden" role="status"></div>
+
+<script src="firebase-config.js"></script>
+<script>
+const LIVE=!!(window.FIREBASE_CONFIG&&FIREBASE_CONFIG.apiKey);
+const $=s=>document.querySelector(s),KEY='patimikoru_v2';
+const esc=t=>String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const day=()=>new Date().toDateString();
+const seed=()=>({user:null,points:120,done:{},day:day(),owned:[],donated:0,tasks:0,best:0,streak:0,last:'',
+  feed:[{id:1,a:'Zeynep Kaya',t:'Her sevgi bir yuva! Bugün mahalledeki dostlarımızı besledik.',img:'akis.jpg',likes:14,liked:false,c:[],ts:Date.now()-36e5}],
+  friends:[],pending:[],chats:{},unread:{}});
+let S;try{S={...seed(),...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){S=seed()}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(LIVE?{...S,feed:[],chats:{},friends:[],unread:{}}:S))}catch(e){toast('Hafıza doldu, fotoğraf kaydedilemedi.')}window.onSave&&onSave()};
+const PEOPLE=['Zeynep Kaya','Mehmet Demir','Elif Aydın','Can Yıldız','Defne Arslan','Burak Şahin'];
+const PTS={'Zeynep Kaya':340,'Mehmet Demir':210,'Elif Aydın':275,'Can Yıldız':150,'Defne Arslan':420,'Burak Şahin':90};
+const REPL=['Harika! Bugün ben de mama bıraktım 🐾','Çok güzel olmuş, tebrikler!','Yarın birlikte görev yapalım mı?','Mahallede yeni bir yavru kedi gördüm 🐱','Süper fikir, ben varım!','Pati yakala oyununda kaç yaptın?'];
+const TASKS=[{id:1,t:'Bir kap su koy',d:'Sokaktaki canlar için taze su bırak.',p:30,img:'su.jpg'},{id:2,t:'Mama desteği sağla',d:'Kediler ve köpekler için mama bırak.',p:50,img:'mama.jpg'},{id:3,t:'Sıcak bir yuva hazırla',d:'Kış için karton, battaniye ya da kulübe koy.',p:60},{id:4,t:'Farkındalık yarat',d:'Bir arkadaşına sokak hayvanlarını anlat ve fotoğrafla.',p:40}];
+const ITEMS=[{id:'rozet',t:'Altın pati rozeti',d:'Profilinde sergile',c:100,i:'🏅'},{id:'cerceve',t:'Yeşil çerçeve',d:'Profil süsü',c:80,i:'🌿'},{id:'yildiz',t:'Pati yıldızı',d:'Profilinde sergile',c:60,i:'⭐'},{id:'bagis',t:'Mama bağışı',d:'Sembolik bağış, tekrar alınabilir',c:150,i:'🥣',rep:1}];
+let cur=null,gm=null,postImg=null,tt;
+function newPost(p){S.feed.unshift({id:Date.now(),a:S.user,likes:0,liked:false,c:[],ts:Date.now(),...p})}
+function toast(m){const e=$('#toast');e.textContent=m;e.classList.remove('hidden');clearTimeout(tt);tt=setTimeout(()=>e.classList.add('hidden'),2600)}
+function shrink(f,cb){const r=new FileReader();r.onload=()=>{const i=new Image();i.onload=()=>{const k=Math.min(1,640/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*k;c.height=i.height*k;c.getContext('2d').drawImage(i,0,0,c.width,c.height);cb(c.toDataURL('image/jpeg',.7))};i.onerror=()=>toast('Fotoğraf okunamadı.');i.src=r.result};r.readAsDataURL(f)}
+const rank=p=>p>=500?'Sokak kahramanı':p>=200?'Pati muhafızı':'Yavru pati';
+const ago=ts=>{const m=Math.floor((Date.now()-ts)/6e4);return m<1?'şimdi':m<60?m+' dk önce':m<1440?Math.floor(m/60)+' sa önce':Math.floor(m/1440)+' gün önce'};
+const img=(s,c)=>s?`<img class="${c||'ph'}" src="${esc(s)}" alt="" onerror="this.remove()">`:'';
+/* auth */
+function openAuth(){$('#auth').classList.remove('hidden');$('#nm').focus()}
+function closeAuth(){$('#auth').classList.add('hidden')}
+function login(e){e.preventDefault();const n=$('#nm').value.trim();if(!n)return;S.user=n;save();closeAuth();enter();toast('Hoş geldin, '+n+'! 🐾')}
+function logout(){S.user=null;save();$('#app').classList.add('hidden');$('#site').classList.remove('hidden');scrollTo(0,0)}
+function resetAll(){if(confirm('Tüm verilerin silinecek. Emin misin?')){localStorage.removeItem(KEY);S=seed();logout();toast('Veriler silindi.')}}
+function enter(){if(S.day!==day()){S.done={};S.day=day();save()}
+  S.pending.forEach(n=>acceptFriend(n,true));S.pending=[];
+  $('#site').classList.add('hidden');$('#app').classList.remove('hidden');scrollTo(0,0);tab('tasks');renderAll()}
+function tab(t){if(t!=='friends')closeChat();else if(!cur)renderFriends();if(t!=='game'&&gm)stopGame();document.querySelectorAll('.pane').forEach(p=>p.classList.add('hidden'));$('#t-'+t).classList.remove('hidden');
+  document.querySelectorAll('.bn button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));scrollTo(0,0)}
+document.querySelectorAll('.bn button').forEach(b=>b.onclick=()=>tab(b.dataset.t));
+function renderAll(){stats();renderTasks();renderFeed();renderFriends();renderShop();renderProfile()}
+function stats(){$('#pts').textContent=S.points;const u=Object.values(S.unread).reduce((a,b)=>a+b,0),b=$('#ub');b.textContent=u;b.classList.toggle('hidden',!u)}
+/* tasks */
+function renderTasks(){$('#tl').innerHTML=TASKS.map(k=>{const d=S.done[k.id];return `<div class="card"><div style="display:flex;justify-content:space-between;gap:10px"><div><h3>${k.t}</h3><p>${k.d}</p></div><span class="chip">+${k.p} puan</span></div>${img(k.img)}
+  ${d?'<button class="btn w s" disabled>Tamamlandı ✓</button>':`<label class="btn w s" style="margin-top:8px">📷 Fotoğraf yükle ve tamamla<input type="file" accept="image/*" hidden onchange="doTask(${k.id},this)"></label>`}</div>`}).join('')}
+function doTask(id,inp){const f=inp.files[0],k=TASKS.find(x=>x.id===id);if(!f||S.done[id])return;
+  shrink(f,data=>{S.done[id]=1;S.points+=k.p;S.tasks++;streakUp();newPost({t:'Görev tamamlandı: '+k.t,img:data});save();renderAll();toast('Tebrikler! +'+k.p+' puan 🐾')})}
+function streakUp(){const t=day(),y=new Date(Date.now()-864e5).toDateString();if(S.last===t)return;S.streak=S.last===y?S.streak+1:1;S.last=t}
+/* feed */
+function pickPost(inp){const f=inp.files[0];if(!f)return;shrink(f,d=>{postImg=d;const p=$('#pp');p.src=d;p.classList.remove('hidden')})}
+function publish(){const t=$('#pt').value.trim();if(!t&&!postImg)return toast('Bir şeyler yaz ya da fotoğraf ekle.');
+  newPost({t,img:postImg});postImg=null;$('#pt').value='';$('#pp').classList.add('hidden');$('#pf').value='';save();renderFeed();toast('Paylaşıldı!')}
+function renderFeed(){$('#fd').innerHTML=S.feed.length?S.feed.map((p,i)=>`<div class="card"><div class="post-head"><div class="av">${esc((p.a||'?')[0])}</div><div><b>${esc(p.a)}</b><small>${ago(p.ts)}</small></div></div>
+  <p style="color:var(--tx);font-size:.95rem">${esc(p.t||'')}</p>${img(p.img)}
+  <div class="acts"><button class="${p.liked?'on':''}" onclick="like(${i})" aria-label="Beğen">${p.liked?'❤️':'🤍'} ${p.likes}</button><span>💬 ${p.c.length}</span></div>
+  ${p.c.map(c=>`<div class="cm"><b>${esc(c.a)}:</b> ${esc(c.t)}</div>`).join('')}
+  <form class="cf" onsubmit="comment(event,${i})"><input type="text" maxlength="200" placeholder="Yorum yaz..."><button class="btn s">Gönder</button></form></div>`).join(''):'<p class="empty">Henüz paylaşım yok. İlk hikâyeyi sen paylaş!</p>'}
+function like(i){const p=S.feed[i];p.liked=!p.liked;p.likes+=p.liked?1:-1;save();renderFeed()}
+function comment(e,i){e.preventDefault();const v=e.target.querySelector('input').value.trim();if(!v)return;S.feed[i].c.push({a:S.user,t:v});save();renderFeed()}
+/* friends & chat */
+function renderFriends(){const q=($('#fs').value||'').toLowerCase();
+  $('#fl').innerHTML=S.friends.length?S.friends.map((n,i)=>{const u=S.unread[n]||0;return `<div class="card row"><div class="av">${esc(n[0])}</div><div class="grow"><b>${esc(n)}</b><small>${u?u+' yeni mesaj':'Pati dostu'}</small></div><button class="btn s" onclick="openChat(${i})">Mesaj${u?' ('+u+')':''}</button><button class="btn o s" onclick="unfriend(${i})">Çıkar</button></div>`}).join(''):'<p class="empty">Henüz arkadaşın yok. Aşağıdan birini ekle.</p>';
+  const l=PEOPLE.filter(n=>!S.friends.includes(n)&&n.toLowerCase().includes(q));
+  $('#sg').innerHTML=l.length?l.map(n=>{const w=S.pending.includes(n);return `<div class="card row"><div class="av">${esc(n[0])}</div><div class="grow"><b>${esc(n)}</b></div><button class="btn a s" ${w?'disabled':''} onclick="addFriend(${PEOPLE.indexOf(n)})">${w?'Bekliyor...':'Arkadaş ekle'}</button></div>`}).join(''):'<p class="empty">Sonuç bulunamadı.</p>';lb();stats()}
+function lb(){const r=[[S.user,S.points,1],...S.friends.map(n=>[n,PTS[n]||0])].sort((a,b)=>b[1]-a[1]);
+  $('#lb').innerHTML=r.map((x,i)=>`<div class="card row" ${x[2]?'style="border-color:var(--ac)"':''}><b class="fr" style="width:24px">${i+1}</b><div class="grow"><b>${esc(x[0])}${x[2]?' (sen)':''}</b></div><span class="chip">${x[1]} puan</span></div>`).join('')+(S.friends.length?'':'<p class="empty">Arkadaş ekle, sıralamaya birlikte gir.</p>')}
+function addFriend(i){const n=PEOPLE[i];if(S.pending.includes(n))return;S.pending.push(n);save();renderFriends();toast('İstek gönderildi.');
+  setTimeout(()=>{if(S.pending.includes(n)){S.pending=S.pending.filter(x=>x!==n);acceptFriend(n);toast(n+' isteğini kabul etti 🤝')}},1500)}
+function acceptFriend(n,quiet){if(S.friends.includes(n))return;S.friends.push(n);push(n,{t:'Merhaba! Arkadaş olduğumuza sevindim 🐾',ts:Date.now()},1);save();if(!quiet)renderFriends()}
+function unfriend(i){const n=S.friends[i];if(!confirm(n+' arkadaşlıktan çıkarılsın mı?'))return;S.friends.splice(i,1);delete S.chats[n];delete S.unread[n];save();renderFriends()}
+function openChat(i){cur=S.friends[i];S.unread[cur]=0;save();$('#fm').classList.add('hidden');$('#chat').classList.remove('hidden');$('#ct').textContent=cur;$('#ca').textContent=cur[0];renderChat();stats();$('#ci').focus()}
+function closeChat(){cur=null;$('#chat').classList.add('hidden');$('#fm').classList.remove('hidden');renderFriends()}
+function renderChat(){const m=S.chats[cur]||[],b=$('#cm');b.innerHTML=m.length?m.map(x=>`<div class="msg ${x.me?'me':''}">${esc(x.t)}<time>${new Date(x.ts).toLocaleTimeString('tr',{hour:'2-digit',minute:'2-digit'})}</time></div>`).join(''):'<p class="empty">İlk mesajı sen gönder 👋</p>';b.scrollTop=b.scrollHeight}
+function push(w,m,inc){(S.chats[w]=S.chats[w]||[]).push(m);if(inc&&cur!==w)S.unread[w]=(S.unread[w]||0)+1;save();if(cur===w)renderChat();stats()}
+function send(e){e.preventDefault();const i=$('#ci'),t=i.value.trim();if(!t||!cur)return;const w=cur;push(w,{me:1,t,ts:Date.now()});i.value='';
+  setTimeout(()=>{if(S.friends.includes(w)){push(w,{t:REPL[Math.floor(Math.random()*REPL.length)],ts:Date.now()},1);if(!$('#t-friends').classList.contains('hidden')&&!cur)renderFriends()}},1200+Math.random()*1000)}
+/* shop */
+function renderShop(){$('#sh').innerHTML=ITEMS.map(x=>{const o=S.owned.includes(x.id)&&!x.rep;return `<div class="card"><b>${x.i}</b><h3>${x.t}</h3><p style="margin-bottom:12px">${x.d}</p><button class="btn s w" ${o?'disabled':''} onclick="buy('${x.id}')">${o?'Sahipsin ✓':x.c+' puan'}</button></div>`}).join('')}
+function buy(id){const x=ITEMS.find(i=>i.id===id);if(S.points<x.c)return toast('Yeterli puanın yok. '+(x.c-S.points)+' puan daha lazım.');
+  S.points-=x.c;if(x.rep)S.donated++;else S.owned.push(id);save();renderAll();toast(x.rep?'Bağışın için teşekkürler! 🥣':x.t+' alındı!')}
+/* game */
+function startGame(){if(gm)return;let sc=0,t=15;const b=$('#gb');b.innerHTML='';$('#gs').textContent=0;$('#gt').textContent=t;
+  const sp=()=>{const p=document.createElement('button');p.className='paw';p.textContent='🐾';p.setAttribute('aria-label','Pati');p.style.left=Math.random()*(b.clientWidth-52)+'px';p.style.top=Math.random()*(b.clientHeight-52)+'px';p.onclick=()=>{sc++;$('#gs').textContent=sc;p.remove();sp()};b.append(p)};sp();
+  gm=setInterval(()=>{t--;$('#gt').textContent=t;if(t<=0){clearInterval(gm);gm=null;const w=Math.floor(sc/2);S.points+=w;if(sc>S.best)S.best=sc;save();renderAll();
+    b.innerHTML=`<div><h3>Süre doldu! Skor: ${sc}</h3><p style="margin:8px 0 14px">+${w} puan kazandın</p><button class="btn" onclick="startGame()">Tekrar oyna</button></div>`}},1000)}
+function stopGame(){clearInterval(gm);gm=null;$('#gb').innerHTML='<button class="btn" onclick="startGame()">Oyunu başlat</button>';$('#gs').textContent=0;$('#gt').textContent=15}
+/* profile */
+function renderProfile(){$('#pn').textContent=S.user||'';$('#pav').textContent=(S.user||'P')[0].toUpperCase();$('#pr').textContent=rank(S.points);$('#mp').textContent=S.points;$('#mt').textContent=S.tasks;$('#mb').textContent=S.best;$('#md').textContent=S.donated;$('#ms').textContent=[day(),new Date(Date.now()-864e5).toDateString()].includes(S.last)?S.streak:0;
+  $('#pav').style.boxShadow=S.owned.includes('cerceve')?'0 0 0 4px #E3A21A':'none';$('#ob').textContent=ITEMS.filter(i=>S.owned.includes(i.id)).map(i=>i.i).join(' ')}
+if(S.user&&!LIVE)enter();
+</script>
+<script type="module">
+if(LIVE){
+const B='https://www.gstatic.com/firebasejs/10.14.1/',$=s=>document.querySelector(s);
+const [{initializeApp},A,F]=await Promise.all([import(B+'firebase-app.js'),import(B+'firebase-auth.js'),import(B+'firebase-firestore.js')]);
+const {getAuth,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,deleteUser}=A;
+const {getFirestore,doc,getDoc,setDoc,updateDoc,addDoc,deleteDoc,collection,query,where,orderBy,limit,onSnapshot,getDocs,arrayUnion,arrayRemove}=F;
+const au=getAuth(initializeApp(FIREBASE_CONFIG)),db=getFirestore(),D=(...p)=>doc(db,...p),Cl=(...p)=>collection(db,...p);
+const FD=['points','tasks','best','streak','last','owned','donated','done','day'],L0=window.logout;
+const key=n=>n.toLocaleLowerCase('tr').replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ş/g,'s').replace(/ı/g,'i').replace(/ö/g,'o').replace(/ç/g,'c').replace(/[^a-z0-9_]/g,'');
+let me,un=[],FR=[],REQ=[],CH={},found=[],sent=[],curU,unM,reg=false,t0,t1;
+const cid=u=>[me.uid,u].sort().join('_'),sub=(q,f)=>un.push(onSnapshot(q,f,e=>console.error(e)));
+const fq=(id,q,a)=>$('#'+id).innerHTML=`<summary>${q}</summary><p>${a}</p>`;
+fq('faq-reg','Kayıt için ne gerekiyor?','Bir kullanıcı adı ve en az 6 karakterlik şifre. E-posta, telefon ya da gerçek isim istemiyoruz.');
+fq('faq-sim','Arkadaşlarım ve mesajlar gerçek mi?','Evet. Hesaplar, arkadaşlık istekleri, akış ve mesajlar Firebase ile gerçek zamanlı çalışır. Mesajlaşma arkadaşlar arasında yapılır.');
+fq('faq-data','Verilerim nerede duruyor?','Hesabın ve paylaşımların Google Firebase üzerinde saklanır. Profil sekmesinden hesabını ve verilerini silebilirsin.');
+$('#bandreg').textContent='kayıt için isim ve şifre';
+$('#pw').classList.remove('hidden');$('#pw').required=true;$('#sw').classList.remove('hidden');$('#lbtn').textContent='Giriş yap';
+$('#sw').onclick=()=>{reg=!reg;$('#sw').textContent=reg?'Hesabın var mı? Giriş yap':'Hesabın yok mu? Kayıt ol';$('#lbtn').textContent=reg?'Kayıt ol':'Giriş yap'};
+window.login=async e=>{e.preventDefault();const n=$('#nm').value.trim(),k=key(n),p=$('#pw').value;if(!k)return toast('İsimde harf veya rakam olmalı.');
+  try{if(reg){const c=await createUserWithEmailAndPassword(au,k+'@patimikoru.app',p);await setDoc(D('users',c.user.uid),{name:n,key:k,points:120,tasks:0,best:0,streak:0,last:'',owned:[],donated:0,done:{},day:day()})}
+  else await signInWithEmailAndPassword(au,k+'@patimikoru.app',p);closeAuth()}
+  catch(x){toast(x.code=='auth/email-already-in-use'?'Bu isim alınmış, başka bir isim dene.':x.code=='auth/weak-password'?'Şifre en az 6 karakter olmalı.':/invalid|not-found|wrong/.test(x.code)?'İsim veya şifre yanlış.':'Hata: '+x.code)}};
+window.logout=async()=>{await signOut(au);S.friends=[];S.unread={};S.chats={};S.feed=[];FR=[];REQ=[];L0()};
+window.resetAll=async()=>{if(!confirm('Hesabın ve verilerin silinecek. Emin misin?'))return;
+  try{await deleteDoc(D('users',me.uid));await deleteUser(au.currentUser)}catch(x){return toast('Silmek için çıkış yapıp tekrar giriş yap.')}
+  localStorage.removeItem(KEY);S=seed();L0();toast('Hesabın silindi.')};
+window.onSave=()=>{if(!me)return;clearTimeout(t1);t1=setTimeout(()=>updateDoc(D('users',me.uid),Object.fromEntries(FD.map(k=>[k,S[k]]))).catch(()=>{}),800)};
+/* feed */
+window.newPost=p=>addDoc(Cl('posts'),{uid:me.uid,name:S.user,t:p.t||'',img:p.img||null,ts:Date.now(),likes:[],c:[]});
+window.like=i=>{const p=S.feed[i];updateDoc(D('posts',p.id),{likes:p.liked?arrayRemove(me.uid):arrayUnion(me.uid)})};
+window.comment=(e,i)=>{e.preventDefault();const v=e.target.querySelector('input').value.trim();if(!v)return;updateDoc(D('posts',S.feed[i].id),{c:arrayUnion({a:S.user,t:v})})};
+/* friends */
+const unr=()=>{S.unread={};if(me)FR.forEach(f=>{const c=CH[cid(f.uid)];if(c&&c.last&&c.last.from!==me.uid&&((c.read||{})[me.uid]||0)<c.last.ts&&curU!==f.uid)S.unread[f.name]=1});stats();if(!curU)renderFriends()};
+window.renderFriends=()=>{
+  $('#fl').innerHTML=REQ.map((r,i)=>`<div class="card row" style="border-color:var(--ac)"><div class="av">${esc(r.fromName[0])}</div><div class="grow"><b>${esc(r.fromName)}</b><small>Arkadaş olmak istiyor</small></div><button class="btn s" onclick="acc(${i})">Kabul et</button><button class="btn o s" onclick="rej(${i})">Reddet</button></div>`).join('')+
+  (FR.length?FR.map((f,i)=>`<div class="card row"><div class="av">${esc(f.name[0])}</div><div class="grow"><b>${esc(f.name)}</b><small>${S.unread[f.name]?'Yeni mesaj':'Pati dostu'}</small></div><button class="btn s" onclick="openChat(${i})">Mesaj${S.unread[f.name]?' •':''}</button><button class="btn o s" onclick="unfriend(${i})">Çıkar</button></div>`).join(''):'<p class="empty">Henüz arkadaşın yok. Aşağıdan kullanıcı adıyla ara.</p>');
+  $('#sg').innerHTML=found.length?found.map((u,i)=>`<div class="card row"><div class="av">${esc(u.name[0])}</div><div class="grow"><b>${esc(u.name)}</b></div><button class="btn a s" ${sent.includes(u.id)?'disabled':''} onclick="req(${i})">${sent.includes(u.id)?'İstek gönderildi':'Arkadaş ekle'}</button></div>`).join(''):`<p class="empty">${$('#fs').value.length>1?'Kullanıcı bulunamadı.':'En az 2 harf yazıp kullanıcı adıyla ara.'}</p>`};
+$('#fs').oninput=()=>{clearTimeout(t0);t0=setTimeout(async()=>{const k=key($('#fs').value);if(k.length<2){found=[];return renderFriends()}
+  const s=await getDocs(query(Cl('users'),where('key','>=',k),where('key','<=',k+'\uf8ff'),limit(6))),fr=FR.map(f=>f.uid);
+  found=s.docs.filter(x=>x.id!==me.uid&&!fr.includes(x.id)).map(x=>({id:x.id,name:x.data().name}));renderFriends()},400)};
+window.req=async i=>{const u=found[i];await setDoc(D('requests',me.uid+'_'+u.id),{from:me.uid,to:u.id,fromName:S.user,toName:u.name,status:'pending'});sent.push(u.id);toast('İstek gönderildi.');renderFriends()};
+window.acc=async i=>{const r=REQ[i];await setDoc(D('users',me.uid,'friends',r.from),{name:r.fromName});await updateDoc(D('requests',r.id),{status:'accepted'});toast(r.fromName+' artık arkadaşın 🤝')};
+window.rej=i=>deleteDoc(D('requests',REQ[i].id));
+window.unfriend=i=>{if(confirm(FR[i].name+' arkadaşlıktan çıkarılsın mı?'))deleteDoc(D('users',me.uid,'friends',FR[i].uid))};
+/* chat */
+const mark=()=>setDoc(D('chats',cid(curU)),{members:[me.uid,curU].sort(),read:{[me.uid]:Date.now()}},{merge:true});
+window.openChat=async i=>{const f=FR[i];cur=f.name;curU=f.uid;$('#fm').classList.add('hidden');$('#chat').classList.remove('hidden');$('#ct').textContent=cur;$('#ca').textContent=cur[0];S.chats[cur]=[];renderChat();
+  await mark();unM=onSnapshot(query(Cl('chats',cid(curU),'messages'),orderBy('ts'),limit(100)),s=>{S.chats[cur]=s.docs.map(x=>{const m=x.data();return{me:m.from===me.uid,t:m.t,ts:m.ts}});renderChat();mark()});$('#ci').focus()};
+window.closeChat=()=>{unM&&unM();unM=null;cur=null;curU=null;$('#chat').classList.add('hidden');$('#fm').classList.remove('hidden');unr()};
+window.send=async e=>{e.preventDefault();const i=$('#ci'),t=i.value.trim();if(!t||!curU)return;i.value='';const ts=Date.now(),id=cid(curU);
+  await setDoc(D('chats',id),{members:[me.uid,curU].sort(),last:{from:me.uid,t,ts},read:{[me.uid]:ts}},{merge:true});await addDoc(Cl('chats',id,'messages'),{from:me.uid,t,ts})};
+/* auth */
+onAuthStateChanged(au,async u=>{un.forEach(f=>f());un=[];me=u;if(!u)return;
+  let s;for(let i=0;i<6;i++){s=await getDoc(D('users',u.uid));if(s.exists())break;await new Promise(r=>setTimeout(r,500))}
+  if(!s.exists())return;const d=s.data();S.user=d.name;FD.forEach(k=>{if(d[k]!==undefined)S[k]=d[k]});
+  sub(query(Cl('posts'),orderBy('ts','desc'),limit(30)),s=>{S.feed=s.docs.map(x=>{const p=x.data(),L=p.likes||[];return{id:x.id,a:p.name,t:p.t,img:p.img,likes:L.length,liked:L.includes(u.uid),c:p.c||[],ts:p.ts}});renderFeed()});
+  sub(Cl('users',u.uid,'friends'),s=>{FR=s.docs.map(x=>({uid:x.id,name:x.data().name}));unr()});
+  sub(query(Cl('requests'),where('to','==',u.uid),where('status','==','pending')),s=>{REQ=s.docs.map(x=>({id:x.id,...x.data()}));renderFriends()});
+  sub(query(Cl('requests'),where('from','==',u.uid),where('status','==','accepted')),s=>s.docs.forEach(async x=>{await setDoc(D('users',u.uid,'friends',x.data().to),{name:x.data().toName});deleteDoc(x.ref)}));
+  sub(query(Cl('chats'),where('members','array-contains',u.uid)),s=>{CH={};s.docs.forEach(x=>CH[x.id]=x.data());unr()});
+  sub(query(Cl('users'),orderBy('points','desc'),limit(10)),s=>{$('#lb').innerHTML=s.docs.map((x,i)=>{const v=x.data(),m=x.id===u.uid;return `<div class="card row" ${m?'style="border-color:var(--ac)"':''}><b class="fr" style="width:24px">${i+1}</b><div class="grow"><b>${esc(v.name)}${m?' (sen)':''}</b></div><span class="chip">${v.points} puan</span></div>`}).join('')});
+  enter()});
+}
+</script>
+</body>
+</html>
